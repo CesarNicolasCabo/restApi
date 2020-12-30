@@ -1,4 +1,5 @@
-insert into tasks (description,status,creation_date)values('buy cereal',0, NOW());
-insert into tasks (description,status,creation_date)values('study math',0, NOW());
-insert into tasks (description,status,creation_date)values('save money',1, NOW());
-insert into tasks (description,status,creation_date)values('buy apples',0, NOW());
+insert into cuentas (status,descripcion,fecha_alta)values(1,'cuenta corriente',NOW());
+insert into cuentas (status,descripcion,fecha_alta)values(1,'caja de ahorro',NOW());
+insert into cuentas (status,descripcion,fecha_alta)values(0,'cuenta corriente',NOW());
+insert into cuentas (status,descripcion,fecha_alta)values(0,'caja de ahorro en dolares',NOW());
+insert into cuentas (status,descripcion,fecha_alta)values(1,'caja de ahorro',NOW());

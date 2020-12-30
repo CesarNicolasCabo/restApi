@@ -7,20 +7,20 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name="tasks")
+@Table(name="cuentas")
 @Data
-public class Task implements Serializable {
+public class Cuenta implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    private Long idCuenta;
 
-    private String description;
+    private Boolean status;
 
-    private Integer status;
+    private String descripcion;
 
-    @Column(name="creation_date")
-    private Date creationDate;
+    @Column(name="fecha_alta")
+    private Date fechaAlta;
 }
