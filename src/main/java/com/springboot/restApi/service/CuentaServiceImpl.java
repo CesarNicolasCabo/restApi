@@ -13,7 +13,7 @@ public class CuentaServiceImpl implements CuentaService {
     @Autowired
     private CuentaRepository cuentaRepository;
 
-    public List<Cuenta> getTask() {
+    public List<Cuenta> getCuentas() {
         return (List<Cuenta>) cuentaRepository.findAll();
     }
 }

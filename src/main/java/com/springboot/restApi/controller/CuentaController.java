@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="todolist")
+@RequestMapping(value="cuentaBancaria")
 public class CuentaController {
 
     CuentaService cuentaService;
@@ -19,8 +19,8 @@ public class CuentaController {
         this.cuentaService = cuentaService;
     }
 
-    @GetMapping(value="tasks")
-    public List<Cuenta> getTasks() {
-        return cuentaService.getTask();
+    @GetMapping(value="cuentas")
+    public List<Cuenta> getCuentas() {
+        return cuentaService.getCuentas();
     }
 }

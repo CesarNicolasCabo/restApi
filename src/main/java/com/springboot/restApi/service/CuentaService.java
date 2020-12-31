@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CuentaService {
 
-    public List<Cuenta> getTask();
+    public List<Cuenta> getCuentas();
 }
