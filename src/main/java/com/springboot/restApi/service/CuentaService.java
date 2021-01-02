@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface CuentaService {
 
-    public List<Cuenta> getCuentas();
+    List<Cuenta> getCuentas();
+
+    Cuenta addCuenta();
 }

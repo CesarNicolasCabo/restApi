@@ -3,9 +3,8 @@ package com.springboot.restApi.controller;
 import com.springboot.restApi.domain.Cuenta;
 import com.springboot.restApi.service.CuentaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,8 +18,15 @@ public class CuentaController {
         this.cuentaService = cuentaService;
     }
 
-    @GetMapping(value="cuentas")
+    @GetMapping(value="/obtener_todas_las_cuentas")
+    @ResponseStatus(HttpStatus.OK)
     public List<Cuenta> getCuentas() {
         return cuentaService.getCuentas();
+    }
+
+    @RequestMapping(value = "/crear_nueva_cuenta", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Cuenta addCuenta(@RequestBody Cuenta cuenta) {
+         return cuentaService.addCuenta();
     }
 }
